@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --cinza10: hsl(0, 0%, 10%);
+  --cinza25: hsl(0, 0%, 25%);
+  --cinza50: hsl(0, 0%, 50%);
+  --cinza75: hsl(0, 0%, 75%);
+  --branco: #fff;
+  --preto: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--branco);
+  display: flex;
+  align-items: center;
+  font-family: "Google Sans Flex", sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--preto);
+}
+
+.cabecalho {
+  align-items: center;
+  width: 90vw;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cinza10);
+  border-radius: 20px;
+  border-bottom: 10px solid var(--cinza25);
+  margin: 2.5vh 0;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-imagem {
+  width: 60px;
+  height: auto;
+}
+
+input {
+  color: var(--branco);
+  background-color: var(--cinza25);
+  width: 100%;
+  max-width: 320px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+}
+
+input::placeholder {
+  color: var(--cinza50);
+}
+
+.grid-filmes {
+  display: grid;
+  width: 95vw;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.filme {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.filme img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.filme:hover {
+  transform: scale(1.05);
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(transparent, var(--preto));
+  width: 100%;
+  padding: 10px;
+  border-radius: 0 0 6px 6px;
+}
+
+.info h3 {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.info span {
+  font-size: 0.8rem;
+  color: var(--cinza75);
+}

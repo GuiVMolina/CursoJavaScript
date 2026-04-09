@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --azul: hsl(240, 60%, 40%);
+  --azulOpaco: hsl(240, 35%, 35%);
+  --azulClaro: hsl(210, 100%, 85%);
+  --azulEscuro: hsl(240, 50%, 25%);
+  --azulOpacoClaro: hsl(240, 35%, 55%);
+
+  --branco: hsl(240, 100%, 95%);
+  --preto: hsl(240, 100%, 5%);
+  --preto25: hsl(240, 100%, 5%, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--branco);
+  background-color: var(--preto);
+  font-family: "Google Sans Flex", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  background-color: var(--azulOpaco);
+  border: none;
+  padding: 10px;
+  color: var(--branco);
+  border-radius: 10px;
+  width: 100%;
+  border-bottom: 2px solid var(--azulOpacoClaro);
+  transition: all 0.15s ease-in-out;
+}
+
+input:hover {
+  border-bottom: 2px solid var(--azulClaro);
+  box-shadow: 0 5px 20px color-mix(var(--azulClaro), var(--preto25));
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--branco);
+  box-shadow: 0 5px 20px color-mix(var(--branco), var(--preto25));
+}
+
+input::placeholder {
+  color: hsla(0, 0%, 100%, 0.25);
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+} 
+
+label {
+  top: 50%;
+  left: 10px;
+  color: var(--branco);
+  position: absolute;
+  font-size: 16px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  font-weight: bold;
+  color: var(--branco);
+  background-color: var(--azulEscuro);
+  transition: all 0.15s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--azul);
+  transform: translateY(-5px);
+  scale: 1.05;
+  box-shadow: 0 0 10px 5px var(--azul);
+}
+
+button:active {
+  background-color: var(--azulOpaco);
+  box-shadow: 0 0 10px 5px var(--azulOpaco);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.cep {
+  margin-bottom: 30px;
+}

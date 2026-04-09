@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
+
+:root {
+  --cor1: hsl(180, 100%, 50%);
+
+  --corBg1: hsl(275, 100%, 10%);
+  --corBg2: hsl(325, 100%, 10%);
+
+  --verde: hsl(120, 100%, 35%);
+  --verdeEscuro: hsl(120, 100%, 20%);
+  --vermelho: hsl(0, 100%, 35%);
+  --vermelhoEscuro: hsl(0, 100%, 20%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "Google Sans Flex", sans-serif;
+  transition:
+    color 0.15s ease-in-out,
+    scale 0.1s ease-in-out,
+    transform 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out;
+}
+
+html,
+body {
+  color: #fff;
+  height: 100%;
+  background-color: hsl(0, 0%, 5%);
+}
+
+htmL {
+  scroll-behavior: smooth;
+}
+
+body {
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  border-bottom: 2px solid #000;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--cor1);
+}
+
+button {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: var(--verdeEscuro);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background-color: var(--verde);
+}
+
+button:active {
+  scale: 1.05;
+}
+
+label {
+  align-self: flex-start;
+  font-weight: bold;
+  margin-bottom: -5px;
+}
+
+h1 {
+  text-shadow: 0 0 5px hsl(0, 0%, 100%, 0.75);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+li {
+  padding: 5px 5px 5px 15px;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-between;
+  background-color: hsla(0, 0%, 0%, 0.35);
+}
+
+li:hover {
+  scale: 1.05;
+  transform: translateY(-3px);
+}
+
+p {
+  color: hsl(0, 0%, 100%, 0.5);
+  font-weight: bold;
+}
+
+.form-item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.form-item label {
+  top: 50%;
+  left: 10px;
+  color: hsla(0, 0%, 0%, 0.75);
+  position: absolute;
+  font-size: 16px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.form-item input:focus ~ label,
+.form-item input:not(:placeholder-shown) ~ label {
+  top: -15px;
+  left: 15px;
+  color: var(--cor1);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-item input:focus {
+  border-bottom: 2px solid var(--cor1);
+}
+
+.caixa {
+  gap: 20px;
+  width: 320px;
+  border: 1px solid #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--corBg1);
+  background-image: linear-gradient(135deg, var(--corBg1), var(--corBg2));
+  box-shadow: 5px 5px 15px hsl(0, 0%, 100%, 0.1);
+}
+
+.elemento {
+  gap: 10px;
+  display: flex;
+}
+
+#lista-tarefas {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+#lista-tarefas button {
+  font-size: 20px;
+  background-color: transparent;
+}
+
+#lista-tarefas button:active {
+  scale: 1.25;
+}
+
+.limpar-lista {
+  align-items: center;
+  display: flex;
+  gap: 40px;
+}
+
+.limpar-lista button {
+  background-color: var(--vermelhoEscuro);
+}
+
+.limpar-lista button:hover {
+  background-color: var(--vermelho);
+}

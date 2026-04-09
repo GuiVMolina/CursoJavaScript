@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 09 - Armazenando Tarefas</title>
+    <link rel="icon" type="image/png" href="../favicon/JS.png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="scripts/script.js"></script>
+  </head>
+  <body>
+    <div id="caixa" class="caixa">
+      <h1 id="titulo">Lista de Tarefas</h1>
+      <div class="elemento">
+        <div class="form-item">
+          <input type="text" id="input-tarefa" placeholder="" />
+          <label>Digite a tarefa:</label>
+        </div>
+        <button id="botao-adicionar">Adicionar</button>
+      </div>
+    </div>
+    <section class="caixa">
+      <h1 id="titulo">Tarefas criadas</h1>
+      <ul id="lista-tarefas"></ul>
+      <div class="limpar-lista">
+        <p class="fim">Fim da lista</p>
+        <button id="limpar">Limpar toda a lista</button>
+      </div>
+      <p>Total de tarefas: <num id="num">0</num></p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --vermelho: hsl(0, 100%, 15%);
+  --vermelhoOpaco: hsl(0, 25%, 40%);
+  --vermelhoClaro: hwb(0 10% 60%);
+  --vermelhoEscuro: hsl(0, 100%, 10%);
+  --branco: hsl(0, 0%, 100%);
+  --preto: hsl(0, 100%, 5%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--vermelhoClaro) var(--vermelhoEscuro);
+}
+
+body {
+  color: var(--branco);
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  font-style: normal;
+  font-family: "Google Sans Flex", sans-serif;
+  justify-content: center;
+  background-color: var(--preto);
+  font-optical-sizing: auto;
+}
+
+main {
+  gap: 20px;
+  width: 90vw;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  border-radius: 20px;
+  flex-direction: column;
+  background-color: var(--vermelhoEscuro);
+}
+
+input {
+  flex: 1;
+  width: 40vw;
+  color: var(--branco);
+  height: 40px;
+  padding: 10px;
+  border-style: none;
+  border-radius: 10px;
+  background-color: var(--vermelhoClaro);
+}
+
+input::placeholder {
+  color: var(--branco);
+}
+
+.filtros {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+select {
+  width: 20vw;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.15s ease-in-out;
+  border-radius: 10px;
+  background-color: var(--preto);
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+select:focus {
+  outline: 2px solid var(--vermelhoClaro);
+  outline-offset: 2px;
+}
+
+option {
+  color: var(--branco);
+  padding: 10px;
+  transition: all 0.15s ease-in-out;
+  background-color: var(--vermelhoEscuro);
+}
+
+option:hover {
+  background-color: var(--vermelho);
+}
+
+.lista-produtos {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  padding: 20px;
+  text-align: left;
+  background: var(--vermelho);
+  border-radius: 10px;
+  flex-direction: column;
+  transition: all 0.15s ease-in-out;
+}
+
+.card:hover {
+  scale: 1.05;
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 25px 10px var(--vermelhoClaro);
+  background-color: var(--vermelhoClaro);
+}
+
+.card:active {
+  box-shadow: 0px 0px 25px 10px var(--vermelhoOpaco);
+  background-color: var(--vermelhoOpaco);
+}
+
+.lista-produtos {
+  gap: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
